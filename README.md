@@ -1,4 +1,3 @@
-<img src="./assests/images/wael_habbal_logo.jpg" alt="Wael Habbal | Keep coding" style="border-radius: 50%; width: 120px; height: 120px;">
 # Welcome to the Youthdoors Frontend Practice Project repository!
 
 Our project aims to teach essential skills in frontend development, including building stunning and responsive websites, and gaining a strong understanding of HTML and CSS, which are the foundational building blocks of web development. Additionally, students will learn JavaScript, one of the most popular scripting languages for dynamic web content.

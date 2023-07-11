@@ -1,4 +1,4 @@
-![Wael Habbal](https://waelhabbal.github.io/sanad-youthdoors-frontend-web-development-beginner-MAY-2023/assests/images/wael_habbal_logo.jpg)
+![Wael Habbal](https://waelhabbal.github.io/sanad-youthdoors-frontend-web-development-beginner-MAY-2023/assests/images/wael_habbal_logo.jpg){: style="border-radius: 50%; width: 120px; height: 120px;"}
 
 # Welcome to the Youthdoors Frontend Practice Project repository!
 

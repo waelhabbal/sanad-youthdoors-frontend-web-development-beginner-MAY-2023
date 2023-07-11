@@ -6,6 +6,24 @@
     <title>
       YouthDoors frontend wev development practice project | May 2023
     </title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assests/images/fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assests/images/fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assests/images/fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assests/images/fav/site.webmanifest" />
     <style>
       :root {
         --logo-d: 4rem;
@@ -19,8 +37,7 @@
         margin: 0;
         box-sizing: border-box;
       }
-      html,
-      body {
+      html {
         font-size: 16px;
         color: var(--clr-font);
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -33,60 +50,66 @@
         background-position: center;
         background-attachment: fixed;
       }
+
       body {
         padding: 1rem 2rem;
-        max-width: 992px;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr calc(var(--logo-d) + 2rem);
+        grid-template-rows: 1fr;
+        column-gap: 2rem;
+        max-width: 990px;
+        min-width: 400px;
         margin: 0 auto;
       }
-      aside {
-        display: grid;
-        grid-template-columns: var(--logo-d);
-        gap: calc(var(--logo-d) / 2);
-        position: fixed;
-        right: 2rem;
-        top: 2rem;
-        z-index: 10000;
+      main > section.sponsers {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        grid-column: -2 / -1;
+        grid-row: 1 / 2;
       }
-      aside > * {
-        width: var(--logo-d);
-      }
-      aside img.wael-habbal-logo,
-      aside img.youthdoors-logo {
+      main > section.sponsers img.wael-habbal-logo,
+      main > section.sponsers img.youthdoors-logo {
         width: 100%;
         height: auto;
         border-radius: 50%;
         outline: 0.25rem solid #fff;
         outline-offset: 0.2rem;
       }
-      main > h1 {
+
+      main > section.students {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding-left: 2rem;
+      }
+      main > section.students > h1 {
         color: var(--clr-secondary);
         background-color: #fff;
         border-radius: var(--box-corner);
         padding: var(--box-corner) calc(2 * var(--box-corner));
       }
-      main > h2 {
+      main > section.students > h2 {
         margin-top: calc(var(--box-corner) * 3);
         color: #fff;
       }
-
-      main > article {
+      main > section.students > article {
         font-size: 1.2rem;
         margin: 1rem 0;
         border: 0.2rem dotted #fff;
         padding: calc(var(--box-corner) * 3);
         color: #fff;
       }
-
-      main .cards {
+      main > section.students > .cards {
         width: 100%;
-        max-width: 900px;
         margin: 2rem auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
         row-gap: 1rem;
+        justify-content: stretch;
       }
-      main .cards .card {
-        max-width: calc(300px - 1rem); /* 0.5 margin each side*/
+      main > section.students > .cards .card {
         position: relative;
         background-color: #fff;
         display: flex;
@@ -96,7 +119,7 @@
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
         padding-top: 3rem;
       }
-      main .cards .card img {
+      main > section.students > .cards .card img {
         width: 8rem;
         height: 8rem;
         border-radius: 50%;
@@ -107,30 +130,30 @@
         outline: 0.3rem solid #fff;
         outline-offset: -1px;
       }
-      main .cards .card h2.name {
+      main > section.students > .cards .card h2.name {
         text-align: center;
         padding: 2rem 2rem 0.5rem;
         margin: 0;
         white-space: nowrap;
         font-size: 1.2rem;
       }
-      main .cards .card .actions {
-        padding: 0 2rem 1.2rem;
+      main > section.students > .cards .card .actions {
+        padding: 0 0.8rem 1.2rem;
         display: flex;
         flex-direction: column;
         order: 99;
       }
-      main .cards .card .actions .final-result {
+      main > section.students > .cards .card .actions .final-result {
         padding: 0 0 1rem;
         display: flex;
       }
-      main .cards .card .actions .final-result div {
+      main > section.students > .cards .card .actions .final-result div {
         text-align: center;
         width: 50%;
         margin: 0;
         box-sizing: border-box;
       }
-      main .cards .card .actions .final-result div a {
+      main > section.students > .cards .card .actions .final-result div a {
         text-decoration: none;
         padding: 0.8rem;
         display: flex;
@@ -138,27 +161,35 @@
         border-radius: var(--box-corner);
         transition: background-color 100ms ease-in-out;
       }
-      main .cards .card .actions .final-result div a span {
+      main > section.students > .cards .card .actions .final-result div a span {
         color: var(--clr-secondary);
         font-weight: bold;
         transform-origin: bottom;
         transition: color 100ms ease-in-out;
       }
-      main .cards .card .actions .final-result div a small {
+      main
+        > section.students
+        > .cards
+        .card
+        .actions
+        .final-result
+        div
+        a
+        small {
         color: var(--clr-font);
         font-size: 0.85rem;
         font-weight: normal;
         padding-top: 0.5rem;
       }
-      main .cards .card .actions .final-result div:hover {
+      main > section > .cards .card .actions .final-result div:hover {
         background-color: #ededed49;
       }
-      main .cards .card .actions .references {
+      main > section.students > .cards .card .actions .references {
         display: grid;
         column-gap: calc(2 * var(--box-corner));
         grid-template-columns: 1fr 1fr;
       }
-      main .cards .card .actions .references a {
+      main > section.students > .cards .card .actions .references a {
         text-align: center;
         text-decoration: none;
         color: #fff;
@@ -167,19 +198,20 @@
         background-color: var(--clr-main);
         width: 100%;
         border: none;
-        padding: calc(2 * var(--box-corner));
+        padding: calc(var(--box-corner)) calc(var(--box-corner) * 1.2);
+
         outline: none;
         box-sizing: border-box;
         border-radius: 1.5rem;
         transition: background-color 100ms ease-in-out,
           transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
       }
-      main .cards .card .actions .references a:hover {
+      main > section.students > .cards .card .actions .references a:hover {
         display: inline-block;
         background-color: var(--clr-main);
         transform: scale(1.08);
       }
-      main .cards .card .actions .references a:active {
+      main > section.students > .cards .card .actions .references a:active {
         display: inline-block;
         background-color: var(--clr-main);
         transform: scale(1.08);
@@ -187,836 +219,856 @@
     </style>
   </head>
   <body>
-    <aside class="sponsers">
-      <a href="https://www.facebook.com/LMS.waelhabbal" target="_blank">
-        <img
-          class="wael-habbal-logo"
-          src="./assests/images/wael_habbal_logo.jpg"
-          alt="Wael Habbal"
-        />
-      </a>
-      <a href="https://www.facebook.com/YouthDoors" target="_blank">
-        <img
-          class="youthdoors-logo"
-          src="./assests/images/youth_doors_logo.jpg"
-          alt="SANAD | YouthDoors"
-        />
-      </a>
-    </aside>
     <main>
-      <h1>Frontend Web Development Course</h1>
-      <h2>May 2023 | Practice Projects</h2>
-      <article>
-        Welcome to the Youthdoors Frontend Practice Project repository! Our
-        project aims to teach essential skills in frontend development,
-        including building stunning and responsive websites, and gaining a
-        strong understanding of HTML and CSS, which are the foundational
-        building blocks of web development. Additionally, students will learn
-        JavaScript, one of the most popular scripting languages for dynamic web
-        content. Throughout the course, students will also learn about browser
-        fundamentals, such as how to use developer tools, optimize code for
-        speed and efficiency, and debug their code. By the end of the course,
-        our students will have the skills and knowledge to create custom
-        websites from scratch that will impress potential employers and clients.
-        They will also be able to take full advantage of the latest web
-        technologies to create stunning, responsive websites that look great on
-        any device.
-      </article>
-      <h1>Students</h1>
-      <div class="cards">
-        <div class="card">
+      <section class="sponsers">
+        <a href="https://www.facebook.com/LMS.waelhabbal" target="_blank">
           <img
-            src="./assests/images/student_profile/abd_alrahman_albiek_profile.jpg"
-            alt=""
+            class="wael-habbal-logo"
+            src="./assests/images/wael_habbal_logo.jpg"
+            alt="Wael Habbal"
           />
-          <h2 class="name">Abdul Rahman Al-Biek</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>45</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="abd_alrahman_albiek_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100068420148527"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
+        </a>
+        <a href="https://www.facebook.com/YouthDoors" target="_blank">
           <img
-            src="./assests/images/student_profile/abdullah_alothman_profile.jpg"
-            alt=""
+            class="youthdoors-logo"
+            src="./assests/images/youth_doors_logo.jpg"
+            alt="SANAD | YouthDoors"
           />
-          <h2 class="name">Abdullah Al Othman</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>62</span>
-                  <small>Score</small>
-                </a>
+        </a>
+      </section>
+
+      <section class="students">
+        <h1>Frontend Web Development Course</h1>
+        <h2>May 2023 | Practice Projects</h2>
+        <article>
+          Welcome to the Youthdoors Frontend Practice Project repository! Our
+          project aims to teach essential skills in frontend development,
+          including building stunning and responsive websites, and gaining a
+          strong understanding of HTML and CSS, which are the foundational
+          building blocks of web development. Additionally, students will learn
+          JavaScript, one of the most popular scripting languages for dynamic
+          web content. Throughout the course, students will also learn about
+          browser fundamentals, such as how to use developer tools, optimize
+          code for speed and efficiency, and debug their code. By the end of the
+          course, our students will have the skills and knowledge to create
+          custom websites from scratch that will impress potential employers and
+          clients. They will also be able to take full advantage of the latest
+          web technologies to create stunning, responsive websites that look
+          great on any device.
+        </article>
+        <h1>Students</h1>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/abd_alrahman_albiek_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Abdul Rahman Al-Biek</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>45</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
               </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
+              <div class="references">
+                <a
+                  href="abd_alrahman_albiek_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100068420148527"
+                  target="_blank"
+                  >Follow</a
+                >
               </div>
             </div>
-            <div class="references">
-              <a
-                href="abdullah_alothman_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100041504675137"
-                target="_blank"
-                >Follow</a
-              >
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/abdullah_alothman_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Abdullah Al Othman</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>62</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="abdullah_alothman_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100041504675137"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assests/images/student_profile/student.png" alt="" />
+            <h2 class="name">Aishah Mustafa</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>28</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="aishah_mustafa_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="#!" onclick="return false;" target="_blank"
+                  >❌Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/amal_surmayati_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Amal Surmayati</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>30</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="amal_surmayati_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100027931595124"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/aya_ alfahel_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Aya Alfahel</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>52</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="aya_ alfahel_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/ayaa.alfahel.3"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/hasan_fashtouk_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Hasan Fashtouk</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>82</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="hasan_fashtouk_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100006271217183"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/its_haddad_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">its Haddad</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>89</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="its_haddad_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="https://www.facebook.com/its.7addad" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/jana_esskef_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Jana Esskef</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>65</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="jana_esskef_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="https://www.facebook.com/cillyrolling" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/loay_zeid_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Loay Zeid</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>48</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="loay_zeid_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="https://www.facebook.com/loay.ze" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assests/images/student_profile/student.png" alt="" />
+            <h2 class="name">Mouhamed Ali Baski</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>85</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="m_ali_baski_youthdoors_frontend_practice_projct"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="#!" onclick="return false;" target="_blank"
+                  >❌Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/mohammad _al_kurri_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Mohammad Al Kurri</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>68</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="mohammad _al_kurri_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100015312588926"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/mohammad_shaar_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Mohammad Shaar</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>95</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="mohammad_shaar_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.instagram.com/mohammad.shaar3"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/mostafa_akkam_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Mostafa Akkam</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>69</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="mostafa_akkam_youthdoors_frontend_pactice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100010850584500"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assests/images/student_profile/student.png" alt="" />
+            <h2 class="name">Nour Aldeen Taifour</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>82</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="nour_aldeen_taifour_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="#!" onclick="return false;" target="_blank"
+                  >❌Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/rana_habta_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Rana Habta</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>44</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="rana_habta_sanad_youthdoors_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="https://www.facebook.com/rana.habta" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assests/images/student_profile/student.png" alt="" />
+            <h2 class="name">Rooney Hasan</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>93</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="rooney_hasan_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="#!" onclick="return false;" target="_blank"
+                  >❌Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assests/images/student_profile/student.png" alt="" />
+            <h2 class="name">Shams Alden Nahas</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>60</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="shams_alden-nahas_sanad_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="#!" onclick="return false;" target="_blank"
+                  >❌Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/sima_makki_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Sima Makki</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>40</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="sima_makki_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="https://www.facebook.com/sima.makki.7" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/siwar_osman_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Siwar Osman</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>42</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="siwar_osman_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/siwar.osman.121"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/taghreed_krad_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Taghreed Krad</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>47</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="taghreed_krad_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="https://www.facebook.com/taghrid.krad" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assests/images/student_profile/student.png" alt="" />
+            <h2 class="name">Taher Malahfjy</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>79</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="taher_malahfjy_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="#!" onclick="return false;" target="_blank"
+                  >❌Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/yahia_darir_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Yahia Darir</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>96</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="yahia_darir_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a href="https://www.facebook.com/yahia.darir0" target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/yara_naim_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Yara Naimi</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>58</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>👍🏻😊</span>
+                    <small>Keep Coding</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="yara_naimi_youthdoors_frontend_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100079451430326"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assests/images/student_profile/zakaria_dliwati_profile.jpg"
+              alt=""
+            />
+            <h2 class="name">Zakaria Dliwati</h2>
+            <div class="actions">
+              <div class="final-result">
+                <div>
+                  <a href="#!">
+                    <span>72</span>
+                    <small>Score</small>
+                  </a>
+                </div>
+                <div>
+                  <a href="#!">
+                    <span>🎊👌</span>
+                    <small>Next Stage</small>
+                  </a>
+                </div>
+              </div>
+              <div class="references">
+                <a
+                  href="zakaria_dliwati_youthdoors_practice_project"
+                  target="_blank"
+                  >My Project</a
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100013859952207"
+                  target="_blank"
+                  >Follow</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="card">
-          <img src="./assests/images/student_profile/student.png" alt="" />
-          <h2 class="name">Aishah Mustafa</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>28</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="aishah_mustafa_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="#!" onclick="return false;" target="_blank">❌Follow</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/amal_surmayati_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Amal Surmayati</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>30</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="amal_surmayati_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100027931595124"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/aya_ alfahel_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Aya Alfahel</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>52</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="aya_ alfahel_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/ayaa.alfahel.3" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/hasan_fashtouk_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Hasan Fashtouk</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>82</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="hasan_fashtouk_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100006271217183"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/its_haddad_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">its Haddad</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>89</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="its_haddad_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/its.7addad" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/jana_esskef_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Jana Esskef</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>65</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="jana_esskef_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/cillyrolling" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/loay_zeid_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Loay Zeid</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>48</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="loay_zeid_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/loay.ze" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assests/images/student_profile/student.png" alt="" />
-          <h2 class="name">Mouhamed Ali Baski</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>85</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="m_ali_baski_youthdoors_frontend_practice_projct"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="#!" onclick="return false;" target="_blank">❌Follow</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/mohammad _al_kurri_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Mohammad Al Kurri</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>68</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="mohammad _al_kurri_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100015312588926"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/mohammad_shaar_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Mohammad Shaar</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>95</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="mohammad_shaar_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.instagram.com/mohammad.shaar3"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/mostafa_akkam_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Mostafa Akkam</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>69</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="mostafa_akkam_youthdoors_frontend_pactice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100010850584500"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assests/images/student_profile/student.png" alt="" />
-          <h2 class="name">Nour Aldeen Taifour</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>82</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="nour_aldeen_taifour_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="#!" onclick="return false;" target="_blank">❌Follow</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/rana_habta_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Rana Habta</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>44</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="rana_habta_sanad_youthdoors_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/rana.habta" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assests/images/student_profile/student.png" alt="" />
-          <h2 class="name">Rooney Hasan</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>93</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="rooney_hasan_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="#!" onclick="return false;" target="_blank">❌Follow</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assests/images/student_profile/student.png" alt="" />
-          <h2 class="name">Shams Alden Nahas</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>60</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="shams_alden-nahas_sanad_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="#!" onclick="return false;" target="_blank">❌Follow</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/sima_makki_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Sima Makki</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>40</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="sima_makki_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/sima.makki.7" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/siwar_osman_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Siwar Osman</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>42</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="siwar_osman_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/siwar.osman.121" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/taghreed_krad_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Taghreed Krad</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>47</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="taghreed_krad_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/taghrid.krad" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assests/images/student_profile/student.png" alt="" />
-          <h2 class="name">Taher Malahfjy</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>79</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="taher_malahfjy_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="#!" onclick="return false;" target="_blank">❌Follow</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/yahia_darir_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Yahia Darir</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>96</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="yahia_darir_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a href="https://www.facebook.com/yahia.darir0" target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/yara_naim_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Yara Naimi</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>58</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>👍🏻😊</span>
-                  <small>Keep Coding</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="yara_naimi_youthdoors_frontend_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100079451430326"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="./assests/images/student_profile/zakaria_dliwati_profile.jpg"
-            alt=""
-          />
-          <h2 class="name">Zakaria Dliwati</h2>
-          <div class="actions">
-            <div class="final-result">
-              <div>
-                <a href="#!">
-                  <span>72</span>
-                  <small>Score</small>
-                </a>
-              </div>
-              <div>
-                <a href="#!">
-                  <span>🎊👌</span>
-                  <small>Next Stage</small>
-                </a>
-              </div>
-            </div>
-            <div class="references">
-              <a
-                href="zakaria_dliwati_youthdoors_practice_project"
-                target="_blank"
-                >My Project</a
-              >
-              <a
-                href="https://www.facebook.com/profile.php?id=100013859952207"
-                target="_blank"
-                >Follow</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <article>
-        🎉 Congratulations to all of our frontend development course graduates!
-        Passing this stage is a great achievement, and we are proud of all the
-        hard work and dedication you put into learning and building your skills.
-        <u>For those who didn't pass</u>, we want to remind you that success is
-        not always measured by a single outcome. Each project and learning
-        experience is valuable, and we encourage you to keep building and keep
-        learning. Remember that the journey towards becoming a successful web
-        developer is a long one, and every step you take is progress towards
-        your goal. We believe in you and wish you all the best on your continued
-        journey! 💻💡👍🏼
-      </article>
+        <article>
+          🎉 Congratulations to all of our frontend development course
+          graduates! Passing this stage is a great achievement, and we are proud
+          of all the hard work and dedication you put into learning and building
+          your skills.
+          <u>For those who didn't pass</u>, we want to remind you that success
+          is not always measured by a single outcome. Each project and learning
+          experience is valuable, and we encourage you to keep building and keep
+          learning. Remember that the journey towards becoming a successful web
+          developer is a long one, and every step you take is progress towards
+          your goal. We believe in you and wish you all the best on your
+          continued journey! 💻💡👍🏼
+        </article>
+      </section>
     </main>
   </body>
 </html>

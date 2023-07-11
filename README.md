@@ -1,4 +1,4 @@
-![Wael Habbal](https://www.facebook.com/LMS.waelhabbal)
+![Wael Habbal](https://waelhabbal.github.io/sanad-youthdoors-frontend-web-development-beginner-MAY-2023/assests/images/wael_habbal_logo.jpg)
 
 # Welcome to the Youthdoors Frontend Practice Project repository!
 

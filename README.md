@@ -8,16 +8,10 @@ Throughout the course, students will also learn about browser fundamentals, such
 
 ## Results
 
-Congratulations to all of our frontend development course graduates! We're excited to share the results of the course with you. You can view the student scores and see how everyone did by visiting the following: [https://waelhabbal.github.io/sanad-youthdoors-frontend-web-development-beginner-MAY-2023/ ↗](link)
-
-If you have any questions or concerns about the results, please don't hesitate to reach out to us.
+Congratulations to all of our frontend development course graduates! We're excited to share the results of the course with you. You can view the student scores and see how everyone did by visiting the following link: [https://waelhabbal.github.io/sanad-youthdoors-frontend-web-development-beginner-MAY-2023/ ↗]
 
 ## Keep Learning and Building
 
 For those who didn't pass the course, we want to remind you that success is not always measured by a single outcome. Each project and learning experience is valuable, and we encourage you to keep building and keep learning. Remember that the journey towards becoming a successful web developer is a long one, and every step you take is progress towards your goal.
 
 We believe in you and wish you all the best on your continued journey! 💻💡👍🏼
-
----
-
-If you have any additional information or sections you would like to include in your `README.md` file, feel free to let me know and I can help you add them.

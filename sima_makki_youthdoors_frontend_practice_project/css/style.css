@@ -1,0 +1,385 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* SPACING ALL.. */
+.spacing{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+ /* ..HEADER */
+header{
+    background-image: url(../imag/bg-banner.jpg);
+    height: 100vh;
+    position: relative;
+    background-size: cover;  
+ }
+ @media(max-width:1023px){
+    header {
+      background-size: cover; 
+    }
+
+}
+
+@media(max-width:641px) {
+    body{
+        font-size: 12px;
+    }
+}
+@media(max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
+ .opacite {
+    background-color:rgba(38,119,110,0.5); 
+    height: 100vh;
+}
+/* ..NAV */
+nav{
+    background-color:rgba(38,119,110,0.5);
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    width: 100%;
+}
+ul{
+    list-style: none;
+    display: flex;
+
+    
+}
+ul li{
+    color: lavender;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+  
+@media(max-width:1023px) {
+    .nav-links ul{
+        padding-left: 3px;
+        margin: 2px;
+
+    }
+}
+@media(max-width:623px) {
+    .nav-links{
+        padding-left:1px;
+        margin: 1px;
+    }
+}
+/* MEDILAB-FIRST  */
+ 
+.medilab-first{
+    width: 600px;
+    color: cornsilk;
+    text-align:center;
+    position:absolute;
+    top :50%;
+    left: 50%;
+    overflow: visible;
+    transform: translate(-50%,-50%);
+    flex-direction: column;
+}
+.logo{
+    margin-left: 30px
+}
+@media(max-width:1023px) {
+    .logo{
+        margin-left: 2px;
+    }
+}
+
+.logsoO{
+    width: 200px;
+    margin: auto;
+
+    } 
+button{
+     border: 0;
+     padding: 10px;
+    background-color: rgb(52, 173, 243);
+    margin: 10px;
+}
+/* END-HEADER */
+/* MAIN */
+/* SERVIC */
+.name{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 15px;
+    margin-left: 10%;
+    font-size: 1em;
+}
+.name h2 {
+    color: rgb(24, 2, 2);
+}
+.name p {
+    color: grey;
+}
+.servic {
+    width: 250px;
+   }   
+.FOUR-div{
+    width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 15px;
+    margin: 30px;
+    padding:4px;
+}
+.medical{
+    width: 250px;
+
+}
+/* END SERVIC*/
+/* .BOX  */
+.blue-box{
+    display: flex;
+    background-color: rgb(17, 176, 197);
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 20%;
+} 
+.blue-box h1{
+    justify-content: center;
+}
+.Emergency {
+    padding: 15px;
+    border-left: 2px solid rgb(247, 242, 242);
+    width: 250px 
+}
+.button-reade{
+    padding: 5px;
+   margin: 10px; 
+   color: white; 
+
+}
+/* .End Box */
+/* .DREAM  */
+.dream{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    margin-left: 10%;
+}
+.something{
+    flex-wrap: wrap;
+    width:300px;
+}
+.something p{
+    padding: 10px;
+}
+.something span{
+    color: blue;
+    margin-left: 10px;
+}
+.dream p{
+    color: gray;
+}
+
+.impo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    row-gap: 15px;
+    margin-top: 10px;
+    padding-left: 40px;
+}
+/* END .Dream */
+
+/* .MEET DOCTOR */
+.meet{
+    margin-left: 10%;
+    margin-right: 5%;
+}
+.meet h2{
+    text-align:left;
+}
+.meet img{
+    width: 100%;
+}
+.image{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+} 
+.doctor {
+    color: gray;
+}
+.doctor-img{
+    width: 100%;
+}
+.doctor1{
+    width: 250px;
+    border: 2px solid gray;   
+}
+/* ..END MEET DOCTOR */
+
+/* COMMENT ALEX.. */
+.see{ 
+    background-color: rgb(238, 234, 237);
+    padding: 0px;
+    flex-wrap: wrap;
+    padding-right: 5%;
+    padding-left: 10%;
+   padding-bottom: 2%;
+}
+.ALEX h2{
+    background-color: rgb(214, 200, 200);;
+    display: flex;
+    text-align: left;
+}
+.ALEX {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+.alex1 {
+    background-color:white;
+    padding: 15px;  
+}
+.comment-img{
+    width: 50px;
+}
+.comment{
+    position: relative;
+    width: 250px;
+}
+.comment span{
+    position: absolute;
+    left: 60px;
+    bottom: 15px;
+}
+/* END COMMENT ALEX. */
+/* ABOUT-US. */
+
+.about-us h2 {
+    display: flex;
+    width: 600px;
+}
+.about-us {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px;
+    row-gap: 30px;
+}
+.about-us span{
+color: rgb(85, 111, 228);
+margin-left: 150px;
+}
+.few{
+    width: 300px;
+}
+/* END-ABOUT-US */
+/* .INFORMATION */
+.information{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 2.1em;
+}
+.information p{
+    margin: 15px;
+}
+
+.contact-inf{
+    display: flex;
+    flex-wrap: wrap;  
+}
+.contect{
+    width: 300px;
+}
+.info{
+  max-width: 500px;
+}
+.info input{
+    display: block;
+    width: 100%;
+    margin: 10px;
+}
+.info textarea{
+    display: block;
+    width: 100%;
+    margin: 10px;
+    height: 75px;
+}
+/* END-INFORMATION */
+/* END MAIN  */
+/* FOOTOR */
+.end{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(70, 71, 92);
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    column-gap: 20px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+} 
+
+@media(max-width:641px){
+    .info h2{
+        font-size: 0.8em;
+    }
+    .information{
+        font-size: 1.3em;
+    }
+}
+.end p{
+    width: 200px;
+}
+.quick ul{
+    list-style: disc;
+    margin-left: 3em;
+    display: block;
+    
+    }
+footer .quick ul a{
+    display:block;
+    color: white;
+    text-decoration: none;
+}   
+.icon-end{
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+}
+.facebook{
+    color:white;
+    background-color: blue;
+}
+.google{
+    color:white;
+    background-color:crimson;
+}
+.linkedin{
+    color:white;
+    background-color: darkblue;
+}
+.twitter{
+    color:white;
+    background-color: darkcyan;
+}
+
+
+
+/* END FOOTER  */
+

@@ -1,0 +1,565 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif  ;
+    color: #fff;
+    line-height: 1.6;
+    
+}
+
+h1 , h2, h3 {
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+
+h1, h2, h3, h4{
+    font-weight: 500;
+}
+
+p{
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: calc(16px + 0.6em);
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex{
+    display: flex;
+}
+
+.text-color{
+    color: #000;
+}
+
+.text-color p{
+    color: #b9b8b8;
+}
+
+.orange{
+    padding-bottom: 10px;
+    border-bottom: 3px solid orange;
+}
+
+/* HEADER */
+
+header{
+    background-image: url('/img/bg-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+/* Header Background Color */
+.header-bg-color{
+    background-color: #0c414fbb;
+    width: 100%;
+    height: 100%;
+}
+
+/* Navbar */
+
+.navbar{
+    background-color: #0CB8B6;
+    height: 3em;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar .nav-logo{
+    width: 100px;
+    
+}
+
+.hamburger {
+    position: relative;
+    height: 30px;
+    right: 36px;
+    
+}
+.spany {
+    position: absolute;
+    height: 6px;
+    width: 35px;
+    background-color: #fff;
+}
+.first-s {
+    top: 0;
+}
+.second-s {
+    top: 12px;
+}
+.last-s {
+    top: 24px;
+}
+
+.navbar ul{
+    display: none;
+}
+
+.navbar .flex{
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-content{
+    height: 103%;
+}
+.header-content .flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header-content img{
+    width: 180px;
+}
+
+.header-content p{
+    text-align: center;
+}
+
+
+.header-content a{
+    padding: 7px 20px;
+    margin: 25px 0;
+    background-color: #0CB8B6;
+    border-radius: 3px;
+}
+
+@media (min-width:768px){
+    .hamburger{
+        display: none;
+    }
+    .navbar ul{
+        list-style-type: none;
+        display: flex;
+    }
+    .navbar a{
+        margin: 0 5px;
+        padding: 10px;
+    }
+    .navbar a:hover{
+        background-color: #fff;
+        color: #03394a;
+        border-radius: 5px;
+    }
+}
+
+
+/* SERVICE SECTION */
+
+.service-section{
+    margin: 40px 0;
+}
+
+.our-service {
+    margin-bottom: 40px;
+}
+
+.service {
+    margin-bottom: 30px;
+}
+
+.service-h3 {
+    margin-bottom: 5px;
+}
+
+@media (min-width:768px) {
+    .service-flex {
+        display: flex;
+        gap: 25px;
+
+    }
+
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .service {
+        flex-basis: 50%;
+    }
+
+}
+
+@media (min-width:992px) {
+    .service {
+        flex-basis: 45%;
+    }
+
+    .services {
+        justify-content: space-between;
+        flex-basis: 69%;
+        flex-shrink: 0;
+    }
+
+}
+
+
+/* EMERGENCY CASE */
+
+.emergency-case {
+    margin: 100px 0;
+}
+
+.bg-blue {
+    background-color: #0CB8B6;
+}
+
+.emergency-case .flex {
+    flex-direction: column;
+    padding: 0 25px;
+    max-width: 440px;
+}
+
+.case {
+    padding: 20px 0;
+}
+
+.case-2 {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.read-more {
+    width: fit-content;
+    margin: 20px 0 10px;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+
+@media (min-width:768px) {
+
+    .emergency-case .flex {
+        flex-direction: row;
+        max-width: 1500px;
+        
+    }
+
+    .case-2 {
+        border-top: 0;
+        border-bottom: 0;
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+    .case {
+        padding: 20px 15px;
+        flex-basis: 50%;
+    }
+
+    .case-1 {
+        padding-left: 0;
+    }
+
+    .case-3 {
+        padding-right: 0;
+    }
+}
+
+@media (min-width:992px) {
+    .e-table {
+        width: 15rem;
+    }
+}
+
+
+/* MEDILAB ULTIMATE DREAM */
+
+.medilab-dreams {
+    max-width: 450px;
+}
+
+.know-more {
+    color: #0CB8B6;
+    margin: 15px 0;
+}
+
+.dream-description {
+    margin-bottom: 40px;
+}
+
+.medilab-u-d h1 {
+    line-height: 1.5;
+}
+
+@media (min-width:768px) {
+    .medilab-dreams {
+        max-width: 950px;
+        display: flex;
+        gap: 100px;
+    }
+}
+
+
+/* OUR DOCTORS */
+
+.doctors-section {
+    margin: 100px 0;
+}
+
+.doctors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+.doctor {
+    border: 1px solid #a4a2a284;
+    padding: 3px;
+    width: 160px;
+}
+
+.doctors-section h2 {
+    margin-bottom: 25px;
+}
+
+@media (min-width:768px) {
+    .doctor {
+        width: 175px;
+    }
+}
+
+@media (min-width:992px) {
+    .doctor {
+        width: 235px;
+    }
+}
+
+.opinions-section {
+    background-color: #e7e3e3;
+    padding: 20px 0;
+}
+
+.opinion-p {
+    background-color: #fff;
+    padding: 10px 15px;
+}
+
+.alex-texas {
+    width: 50px;
+    margin: 15px 0;
+}
+
+.opinions-section h3 {
+    display: inline-block;
+    margin: 0 10px;
+    
+}
+
+.opinion {
+    margin: 30px 0;
+}
+
+.alex-bold {
+    font-weight: bold;
+}
+
+@media (min-width:768px) {
+    .opinions {
+        display: flex;
+        gap: 30px;
+    }
+
+    .opinion {
+        margin: 0;
+    }
+}
+
+/* FEW WORDS ABOUT AS */
+
+.about-us-section {
+    background-color: #272626e5;
+    padding: 30px 0;
+}
+
+.about-us-p {
+    display: flex;
+    flex-direction: column;
+}
+
+.suiii {
+    align-self: flex-end;
+}
+
+@media (min-width:768px) {
+    .about-us {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .about-us-p {
+        flex-basis: 340px;
+        
+    }
+
+    .about-us h1 {
+        margin: 0;
+    } 
+}
+
+.quiry-section {
+    padding: 50px 0;
+}
+
+.quiry-section h1 {
+    margin-bottom: 40px;
+}
+
+.info {
+    color: #aeadad;
+    margin-bottom: 25px;
+}
+
+.quiry-input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #d8d5d5;
+}
+
+.message {
+    height: 100px;
+}
+
+.send-message {
+    padding: 10px;
+    color: #fff;
+    background-color: #0CB8B6;
+    border: 0;
+}
+
+@media (min-width:768px) {
+
+    .quiry {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .quiry-form {
+        width: 60%;
+    }
+
+}
+
+footer {
+    background-color: #0c414fbb;
+    padding: 30px 0;
+}
+
+
+
+footer ul {
+    padding-left: 50px;
+}
+
+.links {
+    padding-left: 40px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.link {
+    padding: 10px ;
+    margin: 5px;
+}
+
+.facebook,
+.twiter {
+    background-color: #266afe;
+}
+
+.gmail {
+    background-color: #ff0000;
+}
+
+.linked {
+    background-color: #0a0932;
+}
+
+.copy {
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+@media (min-width:768px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+
+    .about-f {
+        width: 40%;
+    }
+
+    
+}
+
+.header-content h1 {
+    font-weight: 900;
+}
+
+
+/* FONT SIZE */
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+
+    p, a {
+        font-size: 12px;
+    }
+
+    .header-content img {
+        width: 150px;
+    }
+
+
+    .read-more {
+        padding: 0 5px;
+    }
+
+}

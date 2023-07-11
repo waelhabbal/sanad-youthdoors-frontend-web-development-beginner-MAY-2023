@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*---nav bar ---*/
+.nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+}
+
+.nav-bar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a {
+    color: snow;
+    font-size: 3vmin;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a #active,
+a:hover {
+    background-color: #0cadac;
+    transition: .5s;
+}
+
+.check-btn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.menu-btn {
+    margin-top: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    border: 2px solid snow;
+    border-radius: 5px;
+    display: none;
+}
+
+.nav-bar #logo {
+    margin-left: 3%;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+/*-- header project--*/
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image/bg-banner.jpg);
+    background-size: cover;
+    background-position: bottom;
+    font-family: sans-serif;
+    color: white;
+}
+
+.header-contant {
+    width: 100vw;
+    height: 100vh;
+    background-color: #3e6b77;
+    opacity: 0.8;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.header-contant #ctn {
+    padding: 10px 25px;
+    background-color: #0cadac;
+    color: snow;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+}
+
+.header-contant #center-logo {
+    margin-top: 30vh;
+    width: 20%;
+
+}
+
+.header-contant h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 6vw;
+}
+
+.header-contant p {
+    font-size: 2vw;
+    margin: 3px 0;
+    padding: 5px;
+
+}
+
+.header-contant #char {
+    margin: 30px;
+    padding-bottom: 0;
+    font-size: 5vh;
+    font-weight: bolder;
+
+}
+
+/*--section one & there contant our servic &&  THE MEDILAP ULTIMATE DREAM --*/
+
+.service {
+    font-size: 3vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.service h1 {
+    width: 15cm;
+}
+
+
+.p-main {
+    align-self: start;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin: 30px;
+}
+
+/*-- under line in all title --*/
+
+#line {
+    padding: 5px;
+    margin: 20px 2px;
+    border-top: 4px solid orange;
+    width: 4em;
+    height: 2px;
+}
+
+.item-pargraph {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-pargraph p {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.item-pargraph h2 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin: 30px;
+}
+
+/*--sectoin tow contant Emergency case--*/
+.parent {
+    margin: 50px;
+    margin-right: 50px;
+    width: 100%;
+    height: 50vh;
+    background-color: #0cadac;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-direction: row;
+    color: snow;
+    font-size: 3vmin;
+}
+
+.item {
+    border-right: 2px solid snow;
+    padding: 80px;
+
+}
+
+.item p {
+    margin: 30px auto;
+}
+
+.item table {
+    width: 350px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    row-gap: 2px;
+    margin: 30px auto;
+    padding: 30px auto;
+}
+
+td {
+    padding: 10px;
+    border-top: 1px solid gainsboro;
+}
+
+.p-second {
+    align-self: start;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin: 30px;
+}
+
+.itme-2p {
+    padding: 30px;
+    margin: 30px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item input {
+    font-size: 2vmin;
+    color: snow;
+    background-color: #0cadac;
+    border: 3px solid snow;
+    width: 120px;
+    height: 50px;
+}
+
+a {
+    color: #0cadac;
+}
+
+/*-- sectoin four contant our doctor--*/
+
+.parent-imag {
+
+    margin: 30px;
+    padding: 30px;
+    font-size: 4vmin;
+}
+
+.item-imag {
+    display: flex;
+}
+
+.doctor {
+
+    font-size: 2vmin;
+    border: 2px solid #eeeeee;
+    margin: 20px;
+    height: 100%;
+}
+
+/*--sectoin five contant Books--*/
+
+.color-vewis {
+    background-color: #eeeeee;
+    padding: 5%;
+}
+
+.vewis {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    font-size: 2vmin;
+}
+
+.item-vewis p {
+    padding: 30px 0;
+    margin-right: 30px;
+    border: 2px solid snow;
+    background-color: snow;
+
+}
+
+.item-name {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.item-vewis h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.item-vewis h2 {
+    margin: 25px -45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+}
+
+/*-- sectoin six contant about me--*/
+.p-black {
+    padding-left: 10%;
+    width: 100%;
+    height: 50Vh;
+    display: flex;
+    background-color: #29302e;
+}
+
+.p-black h1 {
+    padding: 20px;
+    margin: 50px;
+    width: 20em;
+    color: snow;
+}
+
+.p-black p {
+    padding: 20px;
+    margin: 50px;
+    color: #999999;
+    font-size: 3vmin;
+    width: 50%;
+}
+
+.p-black #singature {
+    margin-left: -20%;
+    align-self: flex-end;
+    color: #0cb8b6;
+}
+
+/*-- sectoin seven contant conact info--*/
+
+.cnt {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    padding: 30px;
+    font-size: 3vmin;
+}
+
+.item-cnt p {
+    margin: 30px;
+}
+
+.item-book {
+    margin: 40px;
+    padding: 40px;
+}
+
+.item-book input {
+    margin: 20px;
+    padding: 10px;
+    width: 50vw;
+    height: 5vh;
+    color: #999999;
+}
+
+.item-book textarea {
+    padding: 20px;
+    margin: 20px;
+    display: block;
+}
+
+.item-book #submit {
+    margin: 30px;
+    width: 130px;
+    background-color: #0cb8b6;
+    border: none;
+    color: snow;
+    font-size: 2vmin;
+}
+
+/*-----footer website----*/
+
+footer {
+    background-color: #325c6a;
+    width: 100%;
+    height: 40%;
+    padding: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: snow;
+}
+
+footer div {
+    padding: 10px 0;
+    margin: 50px;
+    justify-content: space-around;
+}
+
+footer h1 {
+    padding: 20px;
+    font-size: 4vmin;
+}
+
+footer ul {
+    padding: 30px;
+}
+
+.footer {
+    border-top: 1px solid #4b707c;
+    background-color: #325c6a;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#Copyright {
+
+    color: snow;
+}
+
+/*mobail-div*/
+@media only screen and (max-width:850px) {
+    .nav-bar {
+        background-color: #325c6a;
+    }
+
+    .nav-bar ul li a {
+        font-size: 16px;
+    }
+
+    .check-btn {
+        display: block;
+
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #0cadac;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .nav-bar ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .nav-bar ul li a {
+        font-size: 20px;
+
+    }
+
+    a:hover,
+    a#active {
+        background-color: none;
+        color: #0cb8b6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    #logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 25%;
+    }
+
+    .header-contant {
+        font-size: 3vmin;
+
+    }
+
+    .header-contant #center-logo {
+        width: 40vw;
+        margin-top: 30vh;
+    }
+
+    .service {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .p-main {
+        margin: 0;
+    }
+
+    .p-main p {
+        width: 60%;
+    }
+
+    .item-pargraph p {
+        margin: 10px;
+        padding: 10px;
+        width: 60%;
+    }
+
+    .item-pargraph h2 {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .parent {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 80%;
+    }
+
+    .item {
+        margin: 20px;
+        border-right: none;
+        border-bottom: 2px solid snow;
+        ;
+        width: 90%;
+    }
+
+    .parent span:last-child {
+        border-bottom: none;
+    }
+
+    .item-imag {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        padding-left: 0;
+        font-size: 3vmin;
+    }
+
+    .doctor {
+        width: 30%;
+    }
+
+    .item-imag img {
+        width: 100%;
+    }
+
+
+
+    .color-vewis {
+        width: 70%;
+    }
+
+    .vewis {
+        display: block;
+        margin-left: 0;
+    }
+
+    .item-name h2 {
+        margin-left: -35px;
+    }
+
+    .p-black {
+        display: block;
+        height: 20%;
+        height: 65vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .p-black #singature {
+        margin-left: 40%;
+    }
+
+    .cnt {
+        display: block;
+        padding: 0;
+        font-size: 3vmin;
+    }
+
+    .item-book {
+        padding: 0;
+        margin: 0;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    footer div {
+        margin: 0;
+        font-size: 3vmin;
+    }
+
+    footer h1 {
+        padding: 0px;
+        font-size: 3vmin;
+    }
+
+
+}

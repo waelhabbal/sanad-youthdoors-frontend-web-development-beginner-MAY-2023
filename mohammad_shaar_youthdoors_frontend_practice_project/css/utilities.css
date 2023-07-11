@@ -1,0 +1,85 @@
+/* URL Google Fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* variables here */
+:root {
+    --nav-footer-color: #3c6874;
+    --main-color: #0cb8b6;
+    --line-color: #ffb737;
+    --gray-color: gray;
+    --white-color: white;
+}
+
+/* General Sitings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+}
+
+@media (max-width: 299px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 395px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: var(--white-color);
+}
+
+p {
+    margin: 10px 0;
+    color: var(--gray-color);
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+img {
+    width: 100%;
+}
+
+/* General Countainer Sitings */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 2.5rem;
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 0 1.1rem;
+    }
+}
+
+/* General Flex Sitings */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* End of General Sitings */

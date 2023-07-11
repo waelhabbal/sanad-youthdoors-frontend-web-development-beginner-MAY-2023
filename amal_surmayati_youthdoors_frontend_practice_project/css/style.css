@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(38, 119, 119,0.5);
+
+}
+.ul1 {
+    display: flex;
+    list-style: none;
+}
+.ul1 li{
+    color: white;
+    padding: 30px;
+    cursor: pointer;
+    
+}
+
+.logo{
+    padding: 10px;
+
+}
+header{
+ 
+    background-image: url(../img/bg-banner.jpg);
+    height: 100vh;
+    position: relative;
+   
+}
+.logo2{
+    width: 200px;
+    margin: auto;
+}
+.firstpage{
+    text-align: center;
+    
+    color: white;
+   
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+    
+}
+.color{
+    background-color:rgba(38, 119, 119,0.5) ;
+    height: 100vh;
+}
+h1{
+    margin: 10px;
+}
+p{
+    margin: 10px;
+}
+.first-buton{
+    background-color: #0cb8b6;
+    color:white;
+    padding: 10px;
+    border: 0;
+    margin-top: 20px;
+    border-radius:5px;
+    cursor: pointer; 
+}
+.main{
+    display: flex;
+    justify-content: center;
+   
+       
+}
+.main h1{
+color: black;
+}
+.main h3{
+    color: black;
+    
+}
+.main p{
+    color: gray;
+
+}
+.main-left p{
+    
+    width: 300px;
+}
+.main-reight{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    width: 700px;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+.main-left{
+width: 300px;
+margin: 50px;
+
+}
+.line{
+    width: 70px;
+    height: 4px;
+    background-color: yellow;
+    margin: 10px;
+
+}
+.one{
+    display: flex;
+    gap: 100px;
+    
+
+}
+.two{
+    display: flex;
+    gap: 100px;
+   
+}
+.img1{
+    width: 100px;
+    margin-left: 25px;
+}
+.img2{
+    width: 90px;
+    margin-left: 25px;
+}
+.case{
+    display: flex;
+    justify-content: center;
+    margin: 75px;
+    gap: 150px;
+    background-color:  #0cb8b6;
+    color: white;
+    padding: 50px;
+    
+}
+    .case2{
+    position: relative
+ 
+}
+.table{
+    margin-top: 10px;
+    width: 200px;
+    border: white;
+   
+}
+.case2::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    left: -8em;
+}
+.button2{
+    background-color:#0cb8b6;
+    color: white; 
+    padding: 10px;
+    border-color:  white ;
+    cursor: pointer; 
+}
+.h2{
+    color: black;
+}
+.p{
+    color: gray;
+}
+.center1{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(252, 252, 252);
+padding: 70px;
+}
+.center2{
+width: 700px;
+}
+.center3{
+    display: flex;
+     justify-content: space-between; 
+     margin: 50px;
+     flex-direction: column;
+}
+.button3{
+    border: none;
+    color: #0cb8b6;
+    background-color:white;
+    cursor: pointer;
+}
+.doctor{
+    margin: 70px;
+
+}
+
+.doctors{
+    display: flex;
+    gap: 30px;
+}
+.doctorss{
+    border: 2px solid gray;
+    
+}
+.alex{
+    display:flex;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.alex-text{
+    display:flex; 
+    padding: 10px;
+}
+.pox{
+   
+    background-color: rgb(236, 236, 252);
+    padding: 70px;
+    
+}
+.img3{
+    width: 40px;
+   
+}
+.pox1{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.containre{
+    width: 100%;
+    padding: 0 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.blace{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 70px;
+    text-align: right; 
+}
+.blace1{
+    width: 200px;
+    text-align: left; 
+}
+.blace2{
+    width: 400px;
+    color: gray;
+padding-left: 50px;
+text-align: left; 
+}
+.em{
+   color:   #0cb8b6;
+
+}
+.inf{
+    display: flex;
+   
+    justify-content: center;
+    margin: 50px;
+}
+.inf1{
+
+}
+.inf2{
+    margin: 50px;
+    padding-left: 100px;
+    max-width: 500px;
+    
+}
+form input{
+
+    width: 150%;
+    margin: 0.5em 0;
+    padding: 0.7em;
+}
+form textarea{
+width: 150%;
+height: 80px;;
+padding: 0.5em;
+}
+input[type="submit"]{
+width: fit-content;
+background-color: #0cb8b6;
+color: white;
+padding: 0.9em;
+cursor: pointer;
+border: none;
+
+}
+.inf12{
+    display: flex;
+    flex-direction: column;
+}
+.fin{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    background-color: rgb(38, 119, 119);;
+    color: white;
+}
+.fin1{
+    width: 300px;
+}
+.fin21{
+margin:20px;
+}
+.s1{
+    width: 40px;
+    height: 40px;
+    background-color: turquoise;
+    margin: 2px;
+}
+.s2{
+    width: 40px;
+    height: 40px;
+    background-color: orangered;
+    margin: 2px;
+}
+.s3{
+    width: 40px;
+    height: 40px;
+    background-color:rgb(3, 3, 56);
+    margin: 2px;
+}
+.s4{
+    width: 40px;
+    height: 40px;
+    background-color: turquoise;
+    margin: 2px;
+}
+.s{
+    display: flex;
+    margin: 20px;
+    
+}

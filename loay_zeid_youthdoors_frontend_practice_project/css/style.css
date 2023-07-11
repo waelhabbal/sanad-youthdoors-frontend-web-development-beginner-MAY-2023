@@ -1,0 +1,894 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.parent {
+    height: 100vh;
+    background-position: center;
+    background-image: url('../pics/bg-banner.jpg');
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center-content {
+    margin-top: 35vh;
+
+}
+
+.add-color {
+    background-color: #2c5a68c4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+}
+
+.consider a {
+    text-decoration-line: none;
+    color: white;
+    font-family: sans-serif;
+    padding: 20px 0 20px 15px;
+    font-weight: bold;
+}
+
+.title {
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.consider a:hover {
+    background-color: #2c5a68c4;
+    transition: .5s;
+
+
+}
+
+.consider {
+    display: flex;
+    align-content: flex-end;
+
+}
+
+.consider ul {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.consider li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    color: white;
+}
+
+.heading-2 {
+    color: white;
+    margin: top 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.paragraph {
+    display: flex;
+    align-self: center;
+    margin-left: 80px;
+    justify-content: center;
+    font-size: larger;
+    color: white;
+}
+
+.button-1 {
+    margin: top 100px;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    justify-content: center;
+    background-color: rgb(15, 176, 175);
+    width: 50;
+    height: 10px;
+    font-family: sans-serif;
+    padding: 20px;
+    padding-bottom: 40px;
+    object-fit: contain;
+    padding-bottom: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.button-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.services-content {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    margin: auto;
+
+}
+
+.our-services {
+    font-family: sans-serif;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 75vw;
+    margin: auto;
+}
+
+.line {
+    border-bottom: 5px solid rgb(255, 208, 0);
+    width: 70px;
+}
+
+.our-services img {
+    width: 80px;
+    height: 80px;
+}
+
+.side-div {
+    width: 35vw;
+    margin-bottom: 30vh;
+}
+
+
+.emergency-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(12, 184, 182);
+    width: 75vw;
+    margin: auto;
+    color: white;
+    margin-bottom: 60px;
+
+}
+
+.emergency-box a {
+    text-decoration-line: none;
+    color: white;
+    padding: 30px;
+}
+
+.emergency-case1 {
+    padding: 50px 20px;
+    border-right: solid 3px white;
+    font-size: larger;
+}
+
+.emergency-case2 {
+    padding: 50px 20px;
+    border-right: solid 3px white;
+    font-size: larger;
+}
+
+.opening-ours {
+    padding: 50px 20px;
+    display: block;
+}
+
+table {
+    margin-top: 30px;
+}
+
+.emergency-case1 button {
+    background-color: rgb(12, 184, 182);
+    border: white solid 3px;
+    width: auto;
+    height: 55px;
+    color: white;
+    margin: 30px;
+}
+
+.emergency-case2 button {
+    background-color: rgb(12, 184, 182);
+    border: white solid 3px;
+    width: auto;
+    height: 55px;
+    color: white;
+    margin: 30px;
+}
+
+.inside-opening {
+    border: 2px black solid;
+    border-top: none;
+    margin-right: 160px;
+
+
+}
+
+td {
+    border: 0px solid #ededed;
+    border-top: 1px solid rgba(216, 216, 216, 0.5);
+    padding: 26px 10px 6px 0;
+    width: 11vw;
+
+}
+
+
+.dream {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75vw;
+    margin: auto;
+
+}
+
+.know {
+
+    margin-top: 30px;
+
+}
+
+.dream a {
+    text-decoration-line: none;
+    color: rgb(15, 176, 175);
+    font-size: larger;
+}
+
+.dream p {
+    font-size: 20px;
+}
+
+.imp {
+    margin-top: 40px;
+    margin-right: 120px;
+    margin-left: 40px;
+}
+
+.imp img {
+    width: 80px;
+    height: 80px;
+}
+
+.imp-1 {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imp-h2 {
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.imp-2 {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ultimate-dream {
+    margin-top: 100px;
+    padding: 25px;
+    width: 45vw;
+
+}
+
+.ultimate-dream p {
+    font-size: 20px;
+}
+
+.label {
+    width: 75vw;
+    margin: 30px auto;
+}
+
+.doctors {
+    width: 75vw;
+    margin: auto;
+}
+
+.the-doctor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.the-doctor img {
+    height: auto;
+    width: 100%;
+}
+
+.card {
+    border: 0.5px solid gray;
+    padding: 7px;
+    width: auto;
+}
+
+
+.patients-say {
+    margin-top: 240px;
+    padding-left: 40px;
+    background-color: rgb(201, 196, 196);
+}
+
+.pat-h2 {
+    padding: 30px 0 40px 18px;
+
+}
+
+.alex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.alex-1 {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+.alex-1 p {
+    background-color: white;
+    width: auto;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+
+
+.alex-imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-left: 50px;
+}
+
+.about-us {
+    width: auto;
+    background-color: rgb(41, 48, 46);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 0;
+}
+
+
+.the-words {
+    color: rgb(153, 153, 153);
+    width: 70%;
+    padding: 40px;
+    font-size: 23px;
+}
+
+.few-words {
+    color: white;
+    margin: auto;
+}
+
+.the-words a {
+    color: #00b9e7;
+    text-decoration-line: none;
+    font-style: italic;
+    margin-left: 108px;
+}
+
+
+.contact-us {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 30px;
+    width: 75vw;
+    margin: auto;
+    height: fit-content;
+}
+
+.contact-title::first-letter {
+    border-bottom: rgb(255, 208, 0) solid 1px;
+}
+
+.contact-info {
+    padding-top: 60px;
+    color: gray;
+    margin-right: 70px;
+    margin-bottom: 200px;
+    padding: 40px;
+    width: 30vw;
+
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info img {
+    width: 70px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+
+}
+
+
+.contact-title {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    color: black;
+    width: 30vw;
+    margin-bottom: 100px;
+}
+
+.location {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-items: start;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+
+textarea {
+    background-color: white;
+    min-height: 50px;
+    width: 30vw;
+    border: rgb(173, 169, 169) solid 1px;
+    margin-left: 6px;
+    padding-top: 3px;
+
+}
+
+input {
+    padding-top: 30px;
+    margin: 10px;
+    height: 50px;
+    border: rgb(173, 169, 169) solid 1px;
+    background-color: white;
+    padding: 25px;
+}
+
+.area {
+    margin-top: auto;
+    padding: 20px;
+}
+
+.form button {
+    background-color: rgb(14, 184, 182);
+    width: 253px;
+    height: 57px;
+    border: none;
+    margin-top: 30px;
+    padding: auto;
+    color: white;
+    margin-left: 10px;
+}
+
+.form a {
+    text-decoration-line: none;
+    color: white;
+    font-size: large;
+}
+
+.form h2 {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+footer {
+    width: auto;
+    background-color: rgb(50, 92, 106);
+    color: white;
+
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    width: auto;
+    padding: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+footer a {
+    color: white;
+    text-decoration-line: none;
+    font-size: 20px;
+}
+
+footer p {
+    font-size: 17px;
+}
+
+footer img {
+    height: 10vh;
+    width: 20vw;
+}
+
+
+@media only screen and (max-width:850px) {
+
+    .navbar {
+
+        display: flex;
+        flex-direction: column;
+        background-color: #2c5a68c4;
+        height: 100%;
+    }
+
+    .consider a {
+        text-decoration-line: none;
+        color: white;
+        font-family: sans-serif;
+        padding: 50px 0 50px 10px;
+        font-weight: bold;
+    }
+
+    .consider {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .consider ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50vw;
+        margin: auto;
+        padding: 60px;
+
+    }
+
+    .consider li {
+        padding: 50px 0;
+        padding: 0%;
+    }
+
+    .title {
+        width: 50vw;
+        margin: auto;
+        margin-bottom: 30px;
+
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .heading-2 {
+        display: none;
+        color: white;
+    }
+
+    .button-1 {
+        display: none;
+    }
+
+    .paragraph {
+        display: none;
+        font-size: large;
+        color: white;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+
+    .emergency-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+    .emergency-box button {
+        padding: 20px;
+    }
+
+    .emergency-case1 {
+        border-bottom: white 2px solid;
+        border-right: none;
+    }
+
+    .emergency-case2 {
+        border-bottom: white 2px solid;
+        border-right: none;
+    }
+
+    .opening-ours {
+        padding: 0 0 40px 20px;
+    }
+
+    .inside-opening table {
+        padding: 0;
+    }
+
+    .inside-opening {
+        margin-right: 0;
+
+    }
+
+    td {
+        border: 0px solid #ededed;
+        border-top: 1px solid rgba(216, 216, 216, 0.5);
+        padding-left: 60px;
+        width: 100px;
+    }
+
+    .our-services {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0 170px 0;
+    }
+
+    .services-content {
+        padding: 0 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+        margin: 0;
+
+    }
+
+    .side-div {
+        width: 90%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        padding-top: 10%;
+      
+    }
+.center-content{
+    display: none;
+}
+
+
+
+    .div-content {
+
+        width: 100%;
+
+        padding: 0 0 50px 0;
+    }
+
+    .services-content {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        padding: 0;
+
+    }
+
+
+    .dream {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        padding: 0 0 100px 0;
+    }
+
+
+
+    .ultimate-dream {
+        margin-top: 100px;
+        padding: 0;
+        width: 90vw;
+
+    }
+
+    .imp {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: auto;
+    }
+
+    .imp-1 {
+        padding-left: 0;
+    }
+
+    .imp-2 {
+        padding-left: 0;
+    }
+
+    .doctors {
+        margin: 90px 0 90px 20px;
+        width: auto;
+
+    }
+
+    .the-doctor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .label {
+        width: 80vw;
+        margin: 0 0 0 25px;
+
+    }
+
+    .the-doctor .card img {
+        height: 179px;
+        width: 174px;
+    }
+
+    .card {
+        border: 0.5px solid gray;
+        width: 173px;
+        height: 282px;
+
+    }
+
+    .card img {
+        width: 130px;
+        padding-right: 15px;
+    }
+
+
+    .patients-say {
+        width: 95vw;
+        margin-top: 240px;
+        background-color: rgb(201, 196, 196);
+        padding-bottom: 50px;
+    }
+
+    .pat-h2 {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .alex {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .alex-1 {
+        width: 80vw;
+        padding-right: 0;
+        padding-top: 50px;
+    }
+
+
+
+    .alex img {
+        margin-top: 10px;
+    }
+
+
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .few-words {
+        width: 50vw;
+        margin: 0 0 0 20px;
+    }
+
+    .the-words {
+        width: 95vw;
+    }
+
+    .the-words {
+        color: rgb(153, 153, 153);
+        padding: 40px 0 0 20px;
+        font-size: 23px;
+    }
+
+    .the-words a {
+        margin-left: 168px;
+    }
+
+    .contact-title::first-letter {
+        border-bottom: rgb(255, 208, 0) solid 1px;
+    }
+
+
+    .contact-us {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-left: 0;
+        padding: 0 0 0 20px;
+        width: 80vw;
+
+    }
+
+    .contact-info {
+        margin-top: 80px;
+        width: 90vw;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .contact-title {
+        margin-top: 50px;
+        width: 80vw;
+
+    }
+
+    .form {
+        width: 90vw;
+        margin-right: 60px;
+        padding: 0 60px 60px 0;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 70px 20px 70px 20px;
+
+    }
+
+    .footer .follow-us img {
+        width: 280px;
+        height: 80px;
+
+    }
+
+    .quick-links {
+        padding-top: 40px;
+    }
+
+    .follow-us {
+        padding-top: 40px;
+
+    }
+}

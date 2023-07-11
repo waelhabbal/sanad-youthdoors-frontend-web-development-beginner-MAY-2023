@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.image{
+background-image: url(27_project_html_css/img/bg-banner.jpg);
+background-size:cover ;
+background-position: center;
+background-repeat: no-repeat;;
+text-align: center;
+position: relative;
+font-size: 20px;
+width:100vw;
+height: 100vh;
+
+
+}
+.content{
+    background-color: #3b6772b7;
+    color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 300px;
+    
+}
+.child2{
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color:#38798ab7;
+    font-size: px;
+   color: antiquewhite;
+}
+ul{
+    list-style: none;
+}
+.options{
+    display: flex;
+    align-items: center;
+}
+.options li{
+    margin: 0 30px;
+}
+.child1{
+    background-color:#268a86;
+    font-size: 15px;
+    color:antiquewhite;
+    padding: 6px;
+    margin: 20px;
+}  
+
+/*section 2*/
+.services{
+    display: flex;
+}
+.second-container{
+    display: flex;
+    flex-direction: row;
+    
+}
+.second-container div{
+    margin: 20px;
+}
+.bluebox{
+    width: 40px;
+    height: 40px;
+    background-color: aquamarine;
+    box-sizing:content-box;
+}
+#width1{
+    width: 40%;
+    margin: 20px;
+}
+.first-contaner{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#main{
+    margin: 100px;
+    font-size:25px;
+    width: 80%;
+    height: 80vh;
+}
+
+/*section 3*/
+
+.backgroundofsec3{
+    background-color: rgb(41, 148, 148);
+    border:2px solid white;
+    padding: 40px;
+    font-size: 25px;
+   width: 80%;
+    text-align: center;
+    color: antiquewhite;
+}
+.miniborder{
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+}
+.flex
+{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    
+    
+
+}
+
+.forth_section{
+    display: flex;
+    margin: 50px;
+    font-size:25px;
+   
+
+}
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 50px 100px;
+    width: 80%;
+    margin: auto;
+    
+}
+.row a{
+    margin: 10px;
+}
+.row h1{
+    margin: 10px;
+}
+.row p{
+    margin: 10px;
+}
+.aa{
+    display: flex;
+
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.the_medilap_dream{
+    width: 500px;
+    margin: 50px;
+   
+
+}
+.box{
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+   padding: 20px;
+}
+
+.forth_section h3{
+    margin: 15px;
+}
+.our_doctors{
+    margin: auto;
+    width: 80%;
+}
+.doctors{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+.about_doctors{
+    margin: 10px;
+    border: 1px solid rgba(196, 187, 187, 0.538);
+}
+.image_of_doctor{
+    width: 200px;
+    height: 200px;
+    padding: 5px 5px 0 5px;
+}
+.our_doctors h4{
+    padding: 0 7px;
+}
+.our_doctors p{
+    padding: 0 7px;
+}
+.our_doctors h1{
+    margin-left: 7px;
+}
+.gray_bg{
+    background-color: grey;
+    width: 100%;
+    height: 42vh;
+    margin: auto;
+}
+.gray_bg h1{
+margin-left: 130px;
+padding-top: 10px;
+}
+.patients{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+    
+    
+}
+.message{
+    background-color: rgb(130, 141, 141);
+    color: whitesmoke;
+    border: 1px solid ghostwhite;
+    padding: 20px;
+    margin: 20px;
+}
+.imge_of_patient{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.patients_name{
+    padding: 5px;
+    justify-content: center;
+}
+.describtion
+{
+    background-color:rgb(48, 49, 48);
+    width: 100%;
+    height:30vh;
+    background-position: center;
+}
+.describtion-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+.info1{
+    width:20%;
+    padding: 20px 10px 20px 100px;
+    margin-left: 150px;
+    color: aliceblue;
+
+}
+.info2{
+    width: 30%;
+    padding: 20px 10px 20px 100px;;
+    color: aliceblue;
+    margin-right: 100px;
+}
+#aqua{
+    color: aquamarine;
+    margin-left: 120px;
+}
+.icons{
+    background-color: gainsboro;
+    width: 20px;
+    height: 20px;
+  
+}
+.connection{
+    height:45vh
+}
+.connection h1{
+    padding-left: 120px;
+}
+.cintact-info{
+    margin: 50px;
+}
+.tomakeflex{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.inline{
+    display: flex;
+}
+.inline p{
+    margin-top: 0;
+    padding: 5px 10px;
+}
+.query{
+    display: block;
+    margin: 0 50px;
+    
+}
+.input{
+    margin: 5px;
+
+}
+#send-message{
+    background-color: aqua;
+}
+#message{
+    padding-bottom: 50px;
+}
+.blue-bg{
+    background-color: #417799;
+    margin: 0;
+    height: 15vh;
+    padding: 20px;
+    color: antiquewhite;
+}
+.the-end{
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-us p{
+    margin: 0 0 5px 0;
+}
+.follow-us p{
+    margin: 0 0 5px 0;
+}
+.flexbox{
+    display: flex;
+
+}
+.firstbox{
+    background-color: #4c86d9;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+}
+.secondbox{
+    background-color: #f63737;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+}
+.thirdbox{
+    background-color: #144064;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+}
+.forthbox{
+    background-color: #318edb;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    padding: 20px 80px;
+    background-color: #417799;
+    text-align: center;
+}
+.footer p{
+    padding: 10px 200px;
+    margin: 0 ;
+    color: antiquewhite;
+    border-top: 1px solid rgb(133, 127, 127);
+}
+@media only screen and(max-width:650px) {
+.flex{
+    flex-direction: column;
+}

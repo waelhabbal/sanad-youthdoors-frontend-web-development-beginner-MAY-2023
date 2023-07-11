@@ -1,0 +1,81 @@
+body{
+margin: 0;
+background: #eee;
+height: auto;
+}
+#header  {
+text-align: center; 
+background-image: url('img/bg-banner.jpg');
+background-size:cover;
+position: relative;
+}
+
+a{
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+}
+.navbar {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+width: auto;
+justify-content: space-between;
+padding: 20px;
+color: whitesmoke;
+
+}
+.nav-links{
+  display: flex;
+align-items: center;
+
+
+}
+.nav-links li{
+   margin:0 20px;
+   
+
+}
+img{
+    padding: 1px;
+    margin: 1px;
+}
+h1{
+color: hsl(208, 100%, 97%);
+font-size: 25px;
+font-weight: 200;
+text-align: center;
+text-transform: capitalize;
+margin: 0;
+}
+#header h2{
+color:whitesmoke ;
+font-size: 1rem;
+}
+#header h5{
+    color : hsl(208, 100%, 97%)
+}
+
+.btn{
+padding: 0.5rem 2rem;
+border: 1px #ccc solid;
+display: inline-block;
+margin: 2rem  ;
+border-radius: 10px;
+text-decoration: none;
+color :#eee;
+background-color: skyblue;
+}
+#serviceSector {
+margin: 1rem;
+display:inline-flex;
+flex-wrap: wrap;
+
+}
+#cont {
+    display: flex;
+    justify-content: space-between;
+}

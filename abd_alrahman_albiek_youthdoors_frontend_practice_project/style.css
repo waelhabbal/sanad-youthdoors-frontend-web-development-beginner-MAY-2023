@@ -1,0 +1,719 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: visible;
+}
+
+.header {
+    height: 100vh;
+    width: 100;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(img/bg-banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.nav-links ul li a {
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #d1ddd9;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100;
+}
+
+.text-box {
+    width: 90;
+    color: white;
+    position: absolute;
+    left: 50;
+    top: 50;
+    transform: translate(-50, -50);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: xx-large;
+    padding: 20px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+    background-color: #0cb8b6;
+    position: relative;
+    cursor: pointer;
+    padding: 12px;
+    margin: 20px;
+    text-transform: capitalize;
+}
+
+.letter {
+    text-transform: uppercase;
+}
+
+
+
+nav .fa {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media (max-width: 900px) {
+    .text-box h1 {
+        font-size: x-large;
+    }
+
+    .text-box p {
+        font-size: small;
+    }
+
+    a img {
+        width: 112px;
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+
+    .fixed {
+        width: 100;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        background-color: #0cb8b6;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: #0cb8b6;
+        height: 0;
+        width: 0;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        transition: 0.5s;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .nav-links ul {
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    .nav-links ul li::after {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: #d1ddd9;
+        display: block;
+        margin: auto;
+    }
+
+    .nav-links ul li:hover::after {
+        width: 50;
+    }
+
+    nav .fa {
+        visibility: visible;
+        opacity: 1;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .fa-bars {
+        float: right;
+        padding: 10px;
+        border: 1px solid #fff;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+}
+
+/* SERVICE */
+
+.service {
+    margin: 50px auto;
+    width: 90;
+    display: flex;
+}
+
+.flex {
+    display: flex;
+}
+
+.service h1 {
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+.service h3 {
+    font-size: x-large;
+    text-transform: capitalize;
+}
+
+.service P {
+    color: grey;
+    font-size: medium;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.service-col .fa {
+    color: #0cb8b6;
+    font-size: 46px;
+    padding: 5px;
+    margin: 20px;
+    margin-left: 0;
+}
+
+.service-col p {
+    width: 400px;
+}
+
+.row {
+    margin-right: 20px;
+}
+
+.row p {
+    width: 400px;
+}
+
+.line {
+    background-color: orange;
+    padding: 2px;
+    width: 70px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+@media (max-width:900px) {
+
+    .service,
+    .flex {
+        display: block;
+        width: 95vw;
+    }
+
+    .service h1,
+    .service h3,
+    .service .fa,
+    .service .line {
+        margin-left: 10px;
+    }
+
+    .service p {
+        width: 95vw;
+    }
+}
+
+/* EMERGENCY */
+
+.emergency-center {
+    width: 80;
+    margin: auto;
+    padding: 150px 0;
+}
+
+.emergency-box {
+    display: flex;
+    column-gap: 1px;
+}
+
+
+.emergency-box h1 {
+    color: white;
+    font-size: xx-large;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.emergency-box p {
+    color: white;
+    font-size: medium;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.emergency,
+.opening {
+    background-color: #0cb8b6;
+    width: 33%;
+    padding: 20px 0 10px 20px;
+}
+
+table {
+    border: 1px thin black;
+    margin: 10px;
+    margin-left: 10px;
+    border-top: 1px solid white;
+}
+
+.emergency-box td {
+    padding: 8px 20px;
+    color: white;
+}
+
+.emergency-btn {
+    margin: 10px;
+    padding: 10px;
+    background-color: #0cb8b6;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+@media(max-width:900px) {
+    .emergency-center {
+        display: block;
+        width: 97vw;
+    }
+
+    .emergency-box {
+        display: block;
+    }
+
+    .emergency,
+    .opening {
+        width: 97vw;
+        margin-bottom: 2px;
+    }
+}
+
+.knowledge-box {
+    display: flex;
+    margin: auto;
+    width: 80;
+}
+
+.knowledge {
+    width: 25%;
+}
+
+.knowledge h1 {
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+.knowledge p {
+    color: gray;
+    width: 300px;
+}
+
+.knowledge span {
+    color: #0cb8b6;
+    margin: 10px;
+    margin-left: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.important {
+    margin-bottom: 30px;
+}
+
+.important-col {
+    width: 65%;
+    margin-left: 5%;
+}
+
+.important h1 {
+    margin-bottom: 10px;
+}
+
+.important p {
+    margin-left: 80px;
+    color: grey;
+}
+
+.arrow {
+    display: inline-block;
+    border-radius: 50;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: #0cb8b6;
+    text-align: center;
+    padding: 15px 0;
+    margin-right: 25px;
+}
+
+.important h1 {
+    display: inline-block;
+}
+
+@media(max-width:900px) {
+    .knowledge-box {
+        display: block;
+        margin: auto;
+        width: 95vw;
+    }
+
+    .knowledge {
+        width: 95vw;
+        margin-bottom: 70px;
+    }
+
+    .knowledge p {
+        width: 95vw;
+    }
+
+    .knowledge span {
+        margin: 20px 0;
+    }
+
+    .important-col {
+        display: block;
+        margin-left: 40px;
+        width: 90vw;
+    }
+}
+
+/* DOCTORS */
+.doctor {
+    width: 80;
+    margin: 40px auto;
+}
+
+.images img {
+    width: 100;
+}
+
+.images,
+.img-row {
+    display: flex;
+}
+
+.card {
+    width: 50;
+    border: gray 1px solid;
+    margin-right: 5%;
+    padding: 5px;
+}
+
+.last-card {
+    margin-right: 0 !important;
+}
+
+.title {
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.card h3,
+p {
+    padding: 10px 7px;
+}
+
+.card .fa {
+    display: inline-block;
+    color: rgb(68, 119, 238);
+    padding: 5px;
+    padding-bottom: 12px;
+}
+
+.card img {
+    box-sizing: border-box
+}
+
+@media(max-width:900px) {
+
+    .images {
+        display: block;
+    }
+
+    .card img {
+        box-sizing: border-box;
+    }
+
+
+    .card {
+        margin: 20px;
+        margin-right: 0;
+
+    }
+}
+
+.view {
+    background-color: rgb(234, 231, 231);
+    padding: 50px 0;
+}
+
+.container {
+    width: 80;
+    margin: auto;
+}
+
+.saying {
+    width: 30vw;
+    margin-right: 5vw;
+}
+
+.paitent,
+.person {
+    display: flex;
+}
+
+.saying p {
+    background-color: #fff;
+    color: gray;
+}
+
+.person {
+    margin: 20px 0 0 0;
+}
+
+.saying img {
+    width: 50px;
+}
+
+.person h3 {
+    margin-left: 5px;
+}
+
+@media(max-width:900px) {
+
+    .paitent {
+        display: block;
+    }
+
+    .container {
+        width: 90vw;
+    }
+
+
+    .saying {
+        width: 90vw;
+    }
+}
+
+/* ABOUT US */
+.about {
+    background-color: rgb(37, 34, 34);
+    padding: 40px;
+}
+
+.about .container {
+    display: flex;
+}
+
+.about .title {
+    color: #fff;
+    width: 50;
+}
+
+.text {
+    color: gray;
+    margin-left: 70px;
+    width: 50;
+
+}
+
+.text span {
+    display: block;
+    color: #0cb8b6;
+    text-align: right;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+@media(max-width:900px) {
+    .about .container {
+        display: block;
+    }
+
+    .text {
+        width: 90vw;
+        margin: 0;
+    }
+}
+
+/* CONTACT US */
+.contact {
+    margin: 30px 0;
+}
+
+.number .info {
+    color: gray;
+    padding: 10px 5px;
+}
+
+.number h3 {
+    text-transform: capitalize;
+}
+
+.number span {
+    padding-left: 4px;
+}
+
+.info .fa {
+    width: 20px;
+}
+
+.up-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.query {
+    text-transform: uppercase;
+    display: block;
+    width: 70;
+}
+
+.in {
+    display: block;
+    margin-bottom: 10px;
+    width: 100;
+    padding: 6px;
+}
+
+.btn {
+    display: block;
+    color: #fff;
+    background-color: #0cb8b6;
+    padding: 10px;
+    border: #0cb8b6 solid;
+    cursor: pointer;
+}
+
+@media(max-width:900px) {
+    .up-info {
+        display: block;
+    }
+}
+
+/* footer */
+footer {
+    background-color: rgba(50, 92, 106);
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p {
+    width: 300px;
+    text-transform: lowercase
+}
+
+.about-us {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.about-us h3 {
+    margin-bottom: 15px;
+}
+
+.about-us ul,
+.about-us .icon {
+    margin: 20px;
+    margin-left: 30px;
+}
+
+.icon .fa-facebook {
+    background-color: rgb(68, 119, 238);
+    padding: 15px;
+    margin-left: 0;
+}
+
+.icon .fa-google-plus {
+    background-color: red;
+    padding: 15px;
+    margin-left: 0;
+}
+
+.icon .fa-linkedin {
+    background-color: navy;
+    padding: 15px;
+    margin-left: 0;
+}
+
+.icon .fa-twitter {
+    background-color: rgb(68, 119, 238);
+    padding: 15px;
+    margin-left: 0;
+}
+
+@media(max-width:900px) {
+    footer .container {
+        display: block;
+    }
+
+    .about-us {
+        margin-bottom: 10px;
+    }
+
+    .about-us h3 {
+        margin-bottom: 15px;
+    }
+
+    .about-us p {
+        width: 90vw;
+    }
+
+    .about-us ul,
+    .about-us .icon {
+        margin-left: 70px;
+    }
+}
+
+.date {
+    width: 100;
+    display: inline-block;
+    background-color: rgba(50, 92, 106);
+    text-align: center;
+    color: #fff;
+    padding: 30px 0;
+}
